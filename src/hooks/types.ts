@@ -82,6 +82,27 @@ export interface Repository {
   default_branch: string
 }
 
+export interface User {
+  id: number;
+  userName: string;
+  name: string;
+  todos: Task[]
+}
+
+export interface Task{
+  id: number;
+  completed: boolean;
+  todo: string;
+  userId: number;
+}
+
+export interface Post {
+  id: number;
+  user: User;
+  title: string;
+  body: string;
+}
+
 export interface Owner {
   login: string
   id: number
